@@ -11,6 +11,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
+# Environment Variables:
+# - CLOUDFLARE_API_TOKEN: Required. Your Cloudflare API token
+# - HEALTH_CHECK_PORT: Optional. Port for the health check endpoint (e.g. 8080)
+
 # Default command: 
 # You can override the --config-folder argument with a mounted volume at runtime.
 # CMD ["python3", "main.py", "--config-folder", "/app/config", "--check-interval", "60"]
